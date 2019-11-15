@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.css')}}">
         <!-- Styles -->
         <style>
             html, body {
@@ -64,6 +64,22 @@
         </style>
     </head>
     <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand bg-dark" href="#">
+                <img src="{{asset('assets/img/logo.png')}}" alt="Logo" style="width:40px;">
+
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link font-weight-bold" href="#">Empleados</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="#">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link font-weight-bold" href="#">Departamentos</a>
+                </li>
+        </nav>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -81,7 +97,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    David
                 </div>
 
                 <div class="links">
