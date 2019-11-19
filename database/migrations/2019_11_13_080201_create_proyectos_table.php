@@ -20,7 +20,6 @@ class CreateProyectosTable extends Migration
             $table->date('fechainicio');
             $table->date('fechafin');
             $table->integer('horasestimadas');
-            $table->foreign('empleado_id')->references('id')->on('empleados');
             $table->timestamps();
         });
     }

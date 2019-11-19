@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','EmpleadoController@index')->name('Emp');
+Route::get('/Proyectos','ProyectoController@index')->name('Proy');
+Route::get('/Departamentos','DepartamentoController@index')->name('Dep');

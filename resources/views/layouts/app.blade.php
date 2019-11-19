@@ -9,13 +9,13 @@
     <div class="flex-center position-ref full-height">
         <div class="content">
             <div class="title m-b-md">
-                Relations
+                Relaciones
             </div>
 
             <div class="links">
-                <a href="">Proyectos</a>
-                <a href="">Empleados</a>
-                <a href="">Departamentos</a>
+                <a href="{{route('Proy')}}">Proyectos</a>
+                <a href="{{route('Emp')}}">Empleados</a>
+                <a href="{{route('Dep')}}">Departamentos</a>
             </div>
             <hr><br><br>
             <div class="op">
