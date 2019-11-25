@@ -12,5 +12,8 @@
 */
 
 Route::get('/','EmpleadoController@index')->name('Emp');
-Route::get('/Proyectos','ProyectoController@index')->name('Proy');
+Route::resource('/proyectos','ProyectoController')->only([
+    'index', 'create', 'update', 'destroy', 'show'
+]);
 Route::get('/Departamentos','DepartamentoController@index')->name('Dep');
+
