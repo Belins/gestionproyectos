@@ -35,7 +35,14 @@ class ProyectoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = new Proyecto;
+        $project->nombre = $request->nombre;
+        $project->titulo = $request->titulo;
+        $project->fechainicio = $request->fechainicio;
+        $project->fechafin = $request->fechafin;
+        $project->horasestimadas = $request->horasestimadas;
+        
+        return redirect();
     }
 
     /**

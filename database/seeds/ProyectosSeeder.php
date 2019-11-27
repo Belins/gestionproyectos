@@ -12,7 +12,10 @@ class ProyectosSeeder extends Seeder
      */
     public function run()
     {
-        $fecha = date('Y/m/d');
+
+        factory(Proyecto::class,10)->create();
+
+        /*$fecha = date('Y/m/d');
   
         for ($i=0;$i<5;$i++) {
             $fechainicio = strtotime ( "+".rand(1,31)." day" , strtotime ( $fecha ) ) ;
@@ -28,5 +31,6 @@ class ProyectosSeeder extends Seeder
                 'horasestimadas' => rand(500,3000),
             ]);
         }
+        */
     }
 }

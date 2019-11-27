@@ -13,7 +13,10 @@ class EmpleadosSeeder extends Seeder
      */
     public function run()
     {
-        Empleado::Insert([
+        
+        factory(Empleado::class,10)->create();
+
+        /*Empleado::Insert([
             [
                 'nombre' => 'David',
                 'apellido' => 'Belinchon',
@@ -75,7 +78,7 @@ class EmpleadosSeeder extends Seeder
                 'telefono' => '645885276'
             ]
             
-        ]);
+        ]);*/
         
     }
 }
