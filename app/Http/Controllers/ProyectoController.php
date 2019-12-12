@@ -24,7 +24,7 @@ class ProyectoController extends Controller
      */
     public function create()
     {
-        //
+        return view('proyectos.crear');
     }
 
     /**
@@ -36,13 +36,16 @@ class ProyectoController extends Controller
     public function store(Request $request)
     {
         $project = new Proyecto;
-        $project->nombre = $request->nombre;
-        $project->titulo = $request->titulo;
-        $project->fechainicio = $request->fechainicio;
-        $project->fechafin = $request->fechafin;
-        $project->horasestimadas = $request->horasestimadas;
+        $project->nombre = $request->input('nombre');
+        $project->titulo = $request->input('titulo');
+        $project->fechainicio = $request->input('fechainicio');
+        $project->fechafin = $request->input('fechafin');
+        $project->horasestimadas = $request->input('horasestimadas');
+        $project->empleado_id = $request->input('empleado_id');
+
+        $project->save();
         
-        return redirect();
+        return redirect(route('proyectos.index'));
     }
 
     /**
@@ -54,7 +57,7 @@ class ProyectoController extends Controller
     public function show($id)
     {
         $proyecto = Proyecto::find($id);
-        return view('proyecto',['proyecto'=>$proyecto]);
+        return view('proyectos.proyecto',['proyecto'=>$proyecto]);
     }
 
     /**
@@ -66,7 +69,8 @@ class ProyectoController extends Controller
 
     public function edit($id)
     {
-        //
+        $proyecto = Proyecto::find($id);
+        return view('proyectos.editar', ['proyecto'=>$proyecto]);
     }
 
     /**
@@ -78,7 +82,17 @@ class ProyectoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Proyecto::where('id', $id)->update(['nombre' => 1]);
+        $project = Proyecto::find($id);
+        $project->nombre = $request->input('nombre');
+        $project->titulo = $request->input('titulo');
+        $project->fechainicio = $request->input('fechainicio');
+        $project->fechafin = $request->input('fechafin');
+        $project->horasestimadas = $request->input('horasestimadas');
+        $project->empleado_id = $request->input('empleado_id');
+
+        $project->save();
+        
+        return redirect(route('proyectos.index'));
     }
 
     /**

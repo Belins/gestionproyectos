@@ -5,7 +5,7 @@
 @section('content')
 
   <h2>Proyectos</h2>
-
+    <button class="btn-success"><a href="{{route('proyectos.create')}}" class="text-dark"> Crear Proyecto</a></button>
     <table>
       <tr>
         <th>Id</th>
@@ -29,7 +29,7 @@
         <td>{{$proyecto->horasestimadas}}</td>
         <td>{{$proyecto->empleado_id}}</td>
         @isset($proyecto->empleado_id)<td>{{$proyecto->empleado->nombre}}</td>@endisset
-        <td><button class="bg-primary" href="{{'proyectos.update'}}">Actualizar</button></td>
+        <td><button class="bg-primary"><a href="{{route('proyectos.edit', $proyecto->id)}}">Actualizar</a></button></td>
         <td>
         <form action="{{route('proyectos.destroy', $proyecto->id)}}" method="POST">
           @csrf
