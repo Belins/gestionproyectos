@@ -15,6 +15,7 @@
         <th>Proyecto</th>
         <th>Departamento</th>
         <th>Colaboraciones</th>
+        <th>Jefe de</th>
       </tr>
       <tr>
         @if($empleado)
@@ -39,8 +40,14 @@
                 <a href="{{route('proyectos.show', $proyecto->id)}}">{{$proyecto->nombre}}</a>
               @endforeach
             </td>
+            @else
+            <td>No</td>
           @endif
-
+          @if($empleado->jefedepartamento)
+            <td><a href="">{{$empleado->jefedepartamento->nombre}}</a></td>
+            @else
+            <td>No</td>
+          @endif
         @endif
       </tr>
       
