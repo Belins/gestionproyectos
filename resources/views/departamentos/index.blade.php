@@ -12,7 +12,7 @@
     </tr>
     @foreach($listadoDepartamentos as $departamento)
     <tr>
-      <td>{{$departamento->nombre}}</td>
+      <td>{{$departamento->id}}</td>
       <td><a href="{{route('departamentos.show', $departamento->id)}}">Ver</a></td>
     </tr>
     @endforeach

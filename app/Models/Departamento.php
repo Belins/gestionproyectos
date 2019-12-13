@@ -6,11 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Departamento extends Model
 {
-	protected $table = 'departamentos';
-    protected $fillable = ['nombre'];
-
     public function empleados(){
-    	return $this->hasMany('App\Empleado');
+    	return $this->hasMany('App\Models\Empleado');
     }
 
 }
