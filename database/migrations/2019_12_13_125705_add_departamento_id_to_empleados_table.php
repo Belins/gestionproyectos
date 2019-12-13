@@ -3,8 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-//clase para añadir empleado_id
-class AddIdEmpleadoToProyectos extends Migration
+
+class AddDepartamentoIdToEmpleadosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddIdEmpleadoToProyectos extends Migration
      */
     public function up()
     {
-        Schema::table('proyectos', function (Blueprint $table) {
-            $table->unsignedBigInteger('empleado_id')->nullable();
-            $table->foreign('empleado_id')->references('id')->on('empleados');
+        Schema::table('empleados', function (Blueprint $table) {
+            $table->unsignedBigInteger('departamento_id');
+            $table->foreign('departamento_id')->references('id')->on('departamentos'); 
         });
     }
 
@@ -26,7 +26,7 @@ class AddIdEmpleadoToProyectos extends Migration
      */
     public function down()
     {
-        Schema::table('proyectos', function (Blueprint $table) {
+        Schema::table('empleados', function (Blueprint $table) {
             //
         });
     }

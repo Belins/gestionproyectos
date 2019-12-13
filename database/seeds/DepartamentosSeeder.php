@@ -12,7 +12,7 @@ class DepartamentosSeeder extends Seeder
      */
     public function run()
     {
-        factory(Departamento::class,2)->create();
+        factory(Departamento::class,3)->create();
         /*Departamento::Insert([
             [
                 'nombre' => 'Tecnologia'
