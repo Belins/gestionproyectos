@@ -29,7 +29,7 @@
         <td>{{$proyecto->horasestimadas}}</td>
         <td>{{$proyecto->empleado_id}}</td>
         @isset($proyecto->empleado_id)<td>{{$proyecto->empleado->nombre}}</td>@endisset
-        <td><button class="bg-primary"><a href="{{route('proyectos.edit', $proyecto->id)}}">Actualizar</a></button></td>
+        <td><button class="bg-primary"><a class="text-dark" href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></button></td>
         <td>
         <form action="{{route('proyectos.destroy', $proyecto->id)}}" method="POST">
           @csrf

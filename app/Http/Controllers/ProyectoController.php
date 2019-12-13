@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Proyecto;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\proyectorequest;
 class ProyectoController extends Controller
 {
     /**
@@ -33,7 +33,7 @@ class ProyectoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(proyectorequest $request)
     {
         $project = new Proyecto;
         $project->nombre = $request->input('nombre');
@@ -80,7 +80,7 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(proyectorequest $request, $id)
     {
         $project = Proyecto::find($id);
         $project->nombre = $request->input('nombre');
