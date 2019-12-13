@@ -12,7 +12,7 @@
 */
 
 Route::get('/','EmpleadoController@index')->name('empleados.index');
-Route::get('/{id}','EmpleadoController@show')->name('empleados.show');
+Route::get('/empleados/{id}','EmpleadoController@show')->name('empleados.show');
 
 Route::get('/proyectos', 'ProyectoController@index')->name('proyectos.index');
 Route::get('/proyectos/create', 'ProyectoController@create')->name('proyectos.create');

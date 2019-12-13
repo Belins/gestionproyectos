@@ -14,10 +14,12 @@
         <th>Telefono</th>
       </tr>
       <tr>
+        @if($empleado)
         <td>{{$empleado->id}}</td>
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
+        @endif
       </tr>
       
 
