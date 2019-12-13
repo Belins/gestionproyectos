@@ -25,7 +25,7 @@
                     <a class="nav-link font-weight-bold" href="{{route('proyectos.index')}}">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="{{route('Dep')}}">Departamentos</a>
+                    <a class="nav-link font-weight-bold" href="{{route('departamentos.index')}}">Departamentos</a>
                     </li>
                 </ul>
             </nav>

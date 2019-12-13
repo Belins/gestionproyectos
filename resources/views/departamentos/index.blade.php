@@ -9,12 +9,11 @@
   <table>
     <tr>
       <th>Id</th>
-      <th>Nombre</th>
     </tr>
     @foreach($listadoDepartamentos as $departamento)
     <tr>
-      <td>{{$departamento->id}}</td>
       <td>{{$departamento->nombre}}</td>
+      <td><a href="{{route('departamentos.show', $departamento->id)}}">Ver</a></td>
     </tr>
     @endforeach
   </table>

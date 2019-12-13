@@ -14,6 +14,9 @@
 Route::get('/','EmpleadoController@index')->name('empleados.index');
 Route::get('/empleados/{id}','EmpleadoController@show')->name('empleados.show');
 
+Route::get('/departamentos','DepartamentoController@index')->name('departamentos.index');
+Route::get('/departamentos/{id}','DepartamentoController@show')->name('departamentos.show');
+
 Route::get('/proyectos', 'ProyectoController@index')->name('proyectos.index');
 Route::get('/proyectos/create', 'ProyectoController@create')->name('proyectos.create');
 Route::post('/proyectos', 'ProyectoController@store')->name('proyectos.store');
@@ -24,5 +27,6 @@ Route::delete('/proyectos/{id}', 'ProyectoController@destroy')->name('proyectos.
 
 
 
-Route::get('/Departamentos','DepartamentoController@index')->name('Dep');
+
+
 
