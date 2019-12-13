@@ -14,24 +14,33 @@
         <th>Telefono</th>
         <th>Proyecto</th>
         <th>Departamento</th>
+        <th>Colaboraciones</th>
       </tr>
       <tr>
         @if($empleado)
-        <td>{{$empleado->id}}</td>
-        <td>{{$empleado->nombre}}</td>
-        <td>{{$empleado->email}}</td>
-        <td>{{$empleado->telefono}}</td>
-        @if($empleado->proyecto)
-          <td><a href="{{route('proyectos.show', $empleado->proyecto->id)}}">{{$empleado->proyecto->nombre}}</a></td>
-          @else
-          <td>No</td>
-        @endif
-        @if($empleado->departamento->id)
-          <td><a href="{{route('departamentos.show', $empleado->departamento->id)}}">{{$empleado->departamento->nombre}}</a></td>
-          @else
-          <td>No</td>
-        @endif
-        
+
+          <td>{{$empleado->id}}</td>
+          <td>{{$empleado->nombre}}</td>
+          <td>{{$empleado->email}}</td>
+          <td>{{$empleado->telefono}}</td>
+          @if($empleado->proyecto)
+            <td><a href="{{route('proyectos.show', $empleado->proyecto->id)}}">{{$empleado->proyecto->nombre}}</a></td>
+            @else
+            <td>No</td>
+          @endif
+          @if($empleado->departamento->id)
+            <td><a href="{{route('departamentos.show', $empleado->departamento->id)}}">{{$empleado->departamento->nombre}}</a></td>
+            @else
+            <td>No</td>
+          @endif
+          @if($empleado->proyectos)
+            <td>
+              @foreach($empleado->proyectos as $proyecto)
+                <a href="{{route('proyectos.show', $proyecto->id)}}">{{$proyecto->nombre}}</a>
+              @endforeach
+            </td>
+          @endif
+
         @endif
       </tr>
       

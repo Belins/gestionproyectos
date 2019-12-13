@@ -15,7 +15,7 @@
         <th>Fecha fin</th>
         <th>Horas estimadas</th>
         <th>Id Empleado</th>
-        <th>Empleado</th>
+        <th>Empleados</th>
       </tr>
       <tr>
         <td>{{$proyecto->id}}</td>
@@ -25,7 +25,13 @@
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
         <td>{{$proyecto->empleado_id}}</td>
-        @isset($proyecto->empleado_id)<td>{{$proyecto->empleado->nombre}}</td>@endisset
+        @if($proyecto->empleados)
+          <td>
+            @foreach($proyecto->empleados as $empleado)
+              <a href="{{route('empleados.show', $empleado->id)}}">{{$empleado->nombre}}</a>
+            @endforeach
+          </td>
+        @endif
       </tr>
     </table>
 

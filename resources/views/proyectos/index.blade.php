@@ -11,7 +11,7 @@
         <th>Id</th>
         <th>Nombre</th>
         <th>Titulo</th>
-        <th>Empleado</th>
+        <th>Empleados</th>
         <th>Actualizar</th>
         <th>Borrar</th>
       </tr>
