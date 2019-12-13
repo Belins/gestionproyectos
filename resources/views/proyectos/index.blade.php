@@ -11,10 +11,6 @@
         <th>Id</th>
         <th>Nombre</th>
         <th>Titulo</th>
-        <th>Fecha Inicio</th>
-        <th>Fecha fin</th>
-        <th>Horas estimadas</th>
-        <th>Id Empleado</th>
         <th>Empleado</th>
         <th>Actualizar</th>
         <th>Borrar</th>
@@ -24,11 +20,7 @@
         <td>{{$proyecto->id}}</td>
         <td><a href="{{route('proyectos.show', $proyecto->id)}}">{{$proyecto->nombre}}</a></td>
         <td>{{$proyecto->titulo}}</td>
-        <td>{{$proyecto->fechainicio}}</td>
-        <td>{{$proyecto->fechafin}}</td>
-        <td>{{$proyecto->horasestimadas}}</td>
-        <td>{{$proyecto->empleado_id}}</td>
-        @isset($proyecto->empleado_id)<td>{{$proyecto->empleado->nombre}}</td>@endisset
+        @isset($proyecto->empleado_id)<td><a href="{{route('empleados.show', $proyecto->empleado_id)}}">{{$proyecto->empleado->nombre}}</a></td>@endisset
         <td><button class="bg-primary"><a class="text-dark" href="{{route('proyectos.edit', $proyecto->id)}}">Editar</a></button></td>
         <td>
         <form action="{{route('proyectos.destroy', $proyecto->id)}}" method="POST">

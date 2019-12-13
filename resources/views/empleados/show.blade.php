@@ -12,6 +12,7 @@
         <th>Nombre</th>
         <th>Email</th>
         <th>Telefono</th>
+        <th>Proyecto</th>
       </tr>
       <tr>
         @if($empleado)
@@ -19,6 +20,9 @@
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
+        <td><a href="{{route('proyectos.show', $empleado->proyecto->id)}}">{{$empleado->proyecto->nombre}}</a></td>
+    
+        
         @endif
       </tr>
       

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+//clase para añadir empleado_id
 class AddIdEmpleadoToProyectos extends Migration
 {
     /**
@@ -15,7 +15,7 @@ class AddIdEmpleadoToProyectos extends Migration
     {
         Schema::table('proyectos', function (Blueprint $table) {
             $table->unsignedBigInteger('empleado_id')->nullable();
-            //$table->foreign('empleado_id')->references('id')->on('empleados');
+            $table->foreign('empleado_id')->references('id')->on('empleados');
         });
     }
 
