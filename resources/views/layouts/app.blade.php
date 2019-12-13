@@ -13,13 +13,13 @@
                 Gestion Proyectos
             </div>
             <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
-                <a class="navbar-brand" href="{{route('Emp')}}">
+                <a class="navbar-brand" href="{{route('empleados.index')}}">
                     <img src="{{asset('assets/img/logo.png')}}" alt="Logo" style="width:50px;">
 
                 </a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="{{route('Emp')}}">Empleados</a>
+                    <a class="nav-link font-weight-bold" href="{{route('empleados.index')}}">Empleados</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link font-weight-bold" href="{{route('proyectos.index')}}">Proyectos</a>

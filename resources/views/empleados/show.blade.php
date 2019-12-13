@@ -13,14 +13,13 @@
         <th>Email</th>
         <th>Telefono</th>
       </tr>
-      @foreach($listadoEmpleados as $empleado)
       <tr>
         <td>{{$empleado->id}}</td>
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
       </tr>
-      @endforeach
+      
 
     </table>
 

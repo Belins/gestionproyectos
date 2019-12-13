@@ -10,15 +10,11 @@
       <tr>
         <th>Id</th>
         <th>Nombre</th>
-        <th>Email</th>
-        <th>Telefono</th>
       </tr>
       @foreach($listadoEmpleados as $empleado)
       <tr>
         <td>{{$empleado->id}}</td>
-        <td>{{$empleado->nombre}}</td>
-        <td>{{$empleado->email}}</td>
-        <td>{{$empleado->telefono}}</td>
+        <td><a href="{{route('empleados.show', $empleado->id)}}">{{$empleado->nombre}}</a></td>
       </tr>
       @endforeach
 
