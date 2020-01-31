@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call('EmpleadosSeeder');
         $this->call('ProyectosSeeder');
         $this->call('ColaboracionesSeeder');
+        $this->call('AddJefeDepartamentosSeeder');
     }
 }
